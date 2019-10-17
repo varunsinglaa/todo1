@@ -1,0 +1,54 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+
+.container
+{
+	height:100%;
+
+	margin-left:250px;
+	margin-right:250px;
+	
+	margin-top:10px;
+}
+
+.movieSearch
+{
+
+background-color: pink;	
+height:25%;
+text-align:center;
+	
+}
+.del
+{
+	background-color:violet;
+	float:right;
+}
+li
+{
+	margin-top:15px;
+	margin-bottom:15px;
+}
+.Add_button
+{
+	background-color:purple;
+	width:80px;
+	height:25px;
+	border:none;
+	
+}
+.movies
+{
+	
+background-color:lightgrey;
+height:50%;
+	
+}
+.Add
+{
+
+background-color:blue;
+height:25%;
+}

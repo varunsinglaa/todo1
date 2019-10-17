@@ -1,0 +1,93 @@
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+
+$(document).ready(function()
+{
+  $("#btn2").click(function()
+  {
+     var a = document.getElementById("Name").value;
+     var tn= document.createElement("li");
+	 var tb= document.createElement("button");
+     var txt=document.createTextNode(a);
+	 var dl=document.createTextNode("delete");
+       tn.appendChild(txt);
+	   tb.appendChild(dl);
+	   tn.appendChild(tb);
+	   tb.classList.add('del');
+	 var b = document.createElement("button")
+    $("ul").append(tn);
+	 
+  });
+  });
+</script>
+<script>
+$(document).ready(function(){
+  $("#smovies").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#ml li").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+<script type="text/javascript">
+    $(function () {
+        $("#hidebox").click(function ()
+         {
+            if ($(this).is(":checked"))
+             {
+                $("#ml").hide();
+            } else 
+            {
+                $("#ml").show();
+            }
+        });
+    });
+</script>
+
+</head>
+
+
+<body>
+
+<div class="container">
+   
+    <div class="movieSearch">
+	  <form >
+	  <h1>Moviemania</h1>
+	   <br>
+	  <h3>Movies for everyone</h3>
+	    <br>
+	   <input type="text" placeholder="Search Movies" id="smovies">
+	   </form>
+	 </div>
+	 
+<div class="movies">
+<h2>Movies to watch</h2>
+<ul type="none" id="ml">
+<li><span class="movies">Dilwale</span> <span class="del">delete</span></li>
+<li><span class="movies">Dark Knight</span>  <span class="del">delete</span></li>
+<li><span class="movies"> Dark Knight1</span>  <span class="del">delete</span></li>
+<li><span class="movies"> Viaksh</span> <span class="del">delete</span></li>
+
+</ul>
+</div>
+<div  class="Add">
+<form style="text-align:center">
+ <input type="checkbox" id="hidebox"> Hide the list
+ <br>
+ <br>
+ <input type="text" id="Name">
+ <br>
+ 
+ <input type="button" class="Add_button" id="btn2" Value="Add" >
+</form>
+</div>	 
+</div>
+
+</body>
+</html>
